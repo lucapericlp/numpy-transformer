@@ -7,8 +7,11 @@ authors = ["Luca Peric"]
 [tool.poetry.dependencies]
 python = "^3.9"
 numpy = "^1.22.4"
+torch = "*"
+torchvision = "*"
 
 [tool.poetry.dev-dependencies]
+pytest = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

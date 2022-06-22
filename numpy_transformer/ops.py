@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def softmax(y: np.ndarray, axis: int = 2) -> np.ndarray:
     """
     softmax a tensor with row-wise being the default.

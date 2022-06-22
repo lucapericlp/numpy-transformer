@@ -12,6 +12,9 @@ torchvision = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
+mypy = "*"
+pytest-black = "*"
+pytest-mypy = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

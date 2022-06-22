@@ -26,6 +26,7 @@ def simple_self_attention(mini_batch: np.ndarray) -> np.ndarray:
 
     return y
 
+
 def sample_batch() -> np.ndarray:
     prim_cand = "The quick brown fox jumped over"
     sec_cand = "Squdgy fez, blank jimp crwth vox"

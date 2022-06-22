@@ -4,6 +4,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+
 def torch_simple_self_attention(x: np.ndarray) -> np.ndarray:
     mini_batch = torch.tensor(x)
     raw_weights = torch.bmm(mini_batch, mini_batch.transpose(1, 2))

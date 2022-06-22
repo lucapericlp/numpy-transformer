@@ -1,0 +1,21 @@
+name: Numpy Transformer
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install poetry
+        run: pipx install poetry
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          architecture: 'x64'
+          cache: 'poetry'
+      - name: set pythonpath
+        run: |
+          echo "PYTHONPATH=${PWD}" >> $GITHUB_ENV
+      - run: poetry install
+      - run: poetry run pytest tests numpy_transformer
